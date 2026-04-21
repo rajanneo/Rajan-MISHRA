@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajan Kumar | Premium Portfolio</title>
+
+    <!-- Tailwind CSS CDN (required) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white overflow-x-hidden">
+    <!-- Sounds (required paths) -->
+    <audio id="audioIntro" preload="auto" src="sounds/intro.mp3"></audio>
+    <audio id="audioClick" preload="auto" src="sounds/click.wav"></audio>
+    <audio id="audioPop" preload="auto" src="sounds/pop-click.wav"></audio>
+
+    <main class="min-h-screen relative">
+      <!-- Premium neon background (decorative) -->
+      <div class="fx-bg" aria-hidden="true">
+        <div class="fx-orb fx-orb--blue"></div>
+        <div class="fx-orb fx-orb--purple"></div>
+        <div class="fx-orb fx-orb--cyan"></div>
+        <div class="fx-grid"></div>
+        <div class="fx-noise"></div>
+        <div class="fx-vignette"></div>
+      </div>
+
+      <!-- Welcome Screen (required) -->
+      <section
+        id="screen-welcome"
+        class="screen screen--active min-h-screen flex items-center justify-center select-none"
+        aria-label="Welcome screen"
+      >
+        <div class="text-center relative px-6">
+          <div class="welcome-ring" aria-hidden="true"></div>
+          <div class="welcome-ring welcome-ring--2" aria-hidden="true"></div>
+          <div class="welcome-ring welcome-ring--3" aria-hidden="true"></div>
+
+          <div class="welcome-title text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-[0.35em]">
+            WELCOME
+          </div>
+          <div class="mt-6 text-sm text-white/60">
+            Tap / click once to enable sound
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Screen (required) -->
+      <section
+        id="screen-intro"
+        class="screen min-h-screen flex items-center justify-center px-6"
+        aria-label="Intro screen"
+      >
+        <div class="w-full max-w-5xl">
+          <div class="intro-panel">
+            <div class="intro-panel__top">
+              <div class="intro-brand text-2xl sm:text-3xl font-extrabold tracking-[0.18em]">
+                PORTFOLIO
+              </div>
+              <button
+                id="btn-skip"
+                class="neon-btn px-4 py-2 rounded-lg text-sm font-semibold"
+                data-sound="click"
+                type="button"
+              >
+                Skip
+              </button>
+            </div>
+
+            <div class="intro-split">
+              <div class="intro-left">
+                <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
+                  <span id="typingText" class="typing-caret"></span>
+                </h1>
+
+                <p class="mt-5 text-white/70 text-lg leading-relaxed max-w-xl">
+                  Graphic Designer with 2+ years of experience in printing services. Skilled in CorelDRAW and print
+                  design, with hands-on experience in designing wedding invitation cards in Hindi and English, along with
+                  banners, posters, and visiting cards.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <button
+                    id="btn-view-work"
+                    class="neon-btn px-7 py-3 rounded-xl font-semibold"
+                    data-sound="click"
+                    type="button"
+                  >
+                    View My Work
+                  </button>
+
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="mailto:rajanmishra7065@gmail.com"
+                    data-sound="click"
+                    aria-label="Email"
+                    title="Email"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-mail"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://wa.me/917834842721"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="WhatsApp"
+                    title="WhatsApp"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://www.linkedin.com/in/rajan-kumar-17262b149?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://www.behance.net/mishrarajan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="Behance"
+                    title="Behance"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-behance"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://www.instagram.com/rajanbr06?igsh=ZndxbDNwMndybmd5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="Instagram"
+                    title="Instagram"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://www.instagram.com/mainzindahoo?igsh=MXc1N3hhM243dmZybw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="Instagram 2"
+                    title="Instagram 2"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://www.instagram.com/thesanataniprotester?igsh=MXhuOTVseG1udDE3MQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="Instagram 3"
+                    title="Instagram 3"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+                  <a
+                    class="icon-pill neon-icon social-pill"
+                    href="https://youtube.com/@mainzindahoon?si=MnC1K83bsjO2iIBa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-sound="click"
+                    aria-label="YouTube"
+                    title="YouTube"
+                  ><svg class="social-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+                </div>
+              </div>
+
+              <div class="intro-right">
+                <img
+                  class="profile-photo"
+                  src="images/Profile-Photo/RAJAN-KUMAR.png"
+                  alt="Rajan Kumar"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Home Page (My Work) (required) -->
+      <section
+        id="screen-home"
+        class="screen min-h-screen px-6 py-12"
+        aria-label="Home screen"
+      >
+        <header class="max-w-6xl mx-auto">
+          <div class="home-hero">
+            <div>
+              <div class="text-xs tracking-[0.35em] text-white/60">MY WORK</div>
+              <h2 class="mt-3 text-4xl sm:text-5xl font-extrabold leading-[1.05]">
+                Rajan Kumar
+              </h2>
+              <p class="mt-3 text-white/70 text-lg max-w-2xl">
+                Hover the cards for purple glow. Buttons and gallery clicks use blue neon + click sound.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button
+                id="btn-about"
+                class="neon-btn px-4 py-2 rounded-lg text-sm font-semibold"
+                data-sound="click"
+                type="button"
+              >
+                Curriculum Vitae
+              </button>
+              <button
+                id="btn-replay"
+                class="neon-btn px-4 py-2 rounded-lg text-sm font-semibold"
+                data-sound="click"
+                type="button"
+              >
+                Replay Intro
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="max-w-6xl mx-auto mt-10">
+          <div id="work" aria-label="Software work"></div>
+
+          <!-- Row 1 (4 Boxes): CorelDRAW, Photoshop, Illustrator, Client Work -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <button class="work-card" type="button" data-sound="pop" data-work="corel">
+              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">⬢</span></div>
+              <div class="work-card__title">CorelDRAW</div>
+              <div class="work-card__meta">Branding • Print</div>
+            </button>
+
+            <button class="work-card" type="button" data-sound="pop" data-work="photoshop">
+              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">◼</span></div>
+              <div class="work-card__title">Photoshop</div>
+              <div class="work-card__meta">Editing • Posters</div>
+            </button>
+
+            <button class="work-card" type="button" data-sound="pop" data-work="illustrator">
+              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">△</span></div>
+              <div class="work-card__title">Illustrator</div>
+              <div class="work-card__meta">Vector • Logos</div>
+            </button>
+
+            <button class="work-card" type="button" data-sound="pop" data-work="client">
+              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">✦</span></div>
+              <div class="work-card__title">Client Work</div>
+              <div class="work-card__meta">Real Projects</div>
+            </button>
+          </div>
+
+          <!-- Row 2 (2 Boxes): YouTube Playlists -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
+            <button
+              class="work-card"
+              type="button"
+              data-sound="pop"
+              data-url="https://youtube.com/playlist?list=PL3XR__pPXYq_m7_ynshnqmJWqVn3zmGaS&si=dMKc7aKtmIMV9VJc"
+            >
+              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">▶</span></div>
+              <div class="work-card__title">Premiere Pro</div>
+              <div class="work-card__meta">YouTube Playlist</div>
+            </button>
+
+            <button
+              class="work-card"
+              type="button"
+              data-sound="pop"
+              data-url="https://youtube.com/playlist?list=PL3XR__pPXYq-_RolaOYB4jMv87pfjsBx5&si=rLXAfcvO-Qj04cZf"
+            >
+              <div class="work-card__icon neon-icon" aria-hidden="true"><span class="work-card__glyph">◎</span></div>
+              <div class="work-card__title">AI Audio &amp; Video</div>
+              <div class="work-card__meta">YouTube Playlist</div>
+            </button>
+          </div>
+
+          <!-- Gallery (required) -->
+          <section class="mt-12" aria-label="Gallery">
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div class="text-xs tracking-[0.35em] text-white/60">GALLERY</div>
+                <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold">Image Grid</h3>
+                <p class="mt-2 text-white/70">
+                  Click a category → open full-screen gallery.
+                </p>
+              </div>
+              <div class="text-sm text-white/60">Corel • Photoshop • Illustrator • Client</div>
+            </div>
+
+            <div
+              id="galleryGrid"
+              class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+            >
+              <button class="gallery-tile" type="button" data-sound="click" data-work="corel">
+                <img alt="CorelDRAW work" class="w-full h-full object-cover" src="images/CorelDRAW/corel-1.jpg.jpg" />
+              </button>
+
+              <button class="gallery-tile" type="button" data-sound="click" data-work="photoshop">
+                <img alt="Photoshop work" class="w-full h-full object-cover" src="images/Photoshop/photoshop-1.jpg.jpg" />
+              </button>
+
+              <button class="gallery-tile" type="button" data-sound="click" data-work="illustrator">
+                <img alt="Illustrator work" class="w-full h-full object-cover" src="images/Illustrator/illustrator-1.jpg.jpg" />
+              </button>
+
+              <button class="gallery-tile" type="button" data-sound="click" data-work="client">
+                <img alt="Client work" class="w-full h-full object-cover" src="images/Local-Client-Work/client%20(1).png" />
+              </button>
+            </div>
+          </section>
+
+          <!-- Curriculum Vitae (About section) -->
+          <section id="about" class="home-hero mt-12" aria-label="Curriculum Vitae">
+            <div class="w-full">
+              <div class="text-xs tracking-[0.35em] text-white/60">CURRICULUM VITAE</div>
+
+              <div class="mt-3 flex flex-col gap-2">
+                <h3 class="text-2xl sm:text-3xl font-extrabold">Rajan Kumar</h3>
+                <div class="text-white/70 text-base sm:text-lg">
+                  North West Delhi, India – 110086
+                </div>
+                <div class="text-white/70 text-base sm:text-lg">
+                  Contact: +91 7834842721 | Email: rajanmishra7065@gmail.com
+                </div>
+              </div>
+
+              <div class="mt-7 grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div class="metric">
+                  <div class="metric__k">Career Objective</div>
+                  <div class="metric__v" style="line-height: 1.6">
+                    To utilize my graphic design skills in a professional work environment and grow with the organization.
+                  </div>
+                </div>
+
+                <div class="metric">
+                  <div class="metric__k">Education</div>
+                  <div class="metric__v" style="line-height: 1.75">
+                    <div>➤ Higher Secondary (12th) – B.S.E.B Board, 2016</div>
+                    <div>➤ B.Com (Pursuing) – Delhi University</div>
+                    <div>➤ Graphics &amp; 2D Animation – Arena Animation</div>
+                  </div>
+                </div>
+
+                <div class="metric">
+                  <div class="metric__k">Technical Skills</div>
+                  <div class="metric__v" style="line-height: 1.75">
+                    <div>➤ CorelDRAW</div>
+                    <div>➤ Adobe Illustrator (Basic)</div>
+                    <div>➤ Adobe Photoshop (Basic)</div>
+                    <div>➤ Adobe Premiere Pro (Basic)</div>
+                    <div>➤ Graphic &amp; Print Design (CMYK, Bleed Setup)</div>
+                    <div>➤ Branding &amp; Advertisement Design</div>
+                    <div>➤ UI/UX Design (Learning)</div>
+                  </div>
+                </div>
+
+                <div class="metric">
+                  <div class="metric__k">Work Experience</div>
+                  <div class="metric__v" style="line-height: 1.75">
+                    <div><b>Graphic Designer</b> – Printing Business, Delhi</div>
+                    <div class="text-white/70">Duration: 2022 – Present</div>
+                    <div class="mt-2">➤ Designed wedding invitation cards daily in Hindi and English</div>
+                    <div>➤ Created banners, posters, visiting cards, bill books, and flex designs</div>
+                    <div>➤ Prepared print-ready files (CMYK, bleed setup, trim marks)</div>
+                    <div>➤ Handled client requirements and delivered work on time</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 metric">
+                <div class="metric__k">Personal Details</div>
+                <div class="metric__v" style="line-height: 1.75">
+                  <div>Father’s Name: Late Sh. Satendra Jha</div>
+                  <div>Date of Birth: 10/12/1999</div>
+                  <div>Gender: Male</div>
+                  <div>Marital Status: Unmarried</div>
+                  <div>Languages Known: Hindi</div>
+                  <div>Nationality: Indian</div>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a class="icon-pill neon-icon social-pill" href="mailto:rajanmishra7065@gmail.com" data-sound="click" aria-label="Email" title="Email"><svg class="social-icon" aria-hidden="true"><use href="#icon-mail"></use></svg></a>
+                <a
+                  class="icon-pill neon-icon social-pill"
+                  href="https://wa.me/917834842721"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-sound="click"
+                  aria-label="WhatsApp"
+                  title="WhatsApp"
+                ><svg class="social-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg></a>
+                <a
+                  class="icon-pill neon-icon social-pill"
+                  href="https://www.linkedin.com/in/rajan-kumar-17262b149?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-sound="click"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                ><svg class="social-icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+                <a
+                  class="icon-pill neon-icon social-pill"
+                  href="https://www.behance.net/mishrarajan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-sound="click"
+                  aria-label="Behance"
+                  title="Behance"
+                ><svg class="social-icon" aria-hidden="true"><use href="#icon-behance"></use></svg></a>
+                <a
+                  class="icon-pill neon-icon social-pill"
+                  href="https://youtube.com/@mainzindahoon?si=MnC1K83bsjO2iIBa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-sound="click"
+                  aria-label="YouTube"
+                  title="YouTube"
+                ><svg class="social-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Full-screen popup (required) -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button id="modalClose" class="modal__close neon-btn" type="button" data-sound="click">
+        Close
+      </button>
+      <div class="modal__nav" aria-hidden="false">
+        <button id="modalPrev" class="neon-btn modal__navBtn" type="button" data-sound="click">Prev</button>
+        <div id="modalCount" class="text-sm text-white/70 select-none">1 / 1</div>
+        <button id="modalNext" class="neon-btn modal__navBtn" type="button" data-sound="click">Next</button>
+      </div>
+      <img id="modalImg" class="modal__img" alt="Full screen preview" />
+    </div>
+
+    <!-- SVG icons -->
+    <svg width="0" height="0" style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true" focusable="false">
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5Zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5ZM18 6.8a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.8Z"/>
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12.04 2A9.94 9.94 0 0 0 2 11.94a9.83 9.83 0 0 0 1.45 5.15L2 22l5.05-1.33a9.93 9.93 0 0 0 15-8.73A9.94 9.94 0 0 0 12.04 2Zm0 18a8 8 0 0 1-4.08-1.12l-.29-.17-3 .79.8-2.92-.19-.3A8 8 0 1 1 20 11.94a8 8 0 0 1-7.96 8.06Zm4.66-5.97c-.25-.13-1.48-.73-1.71-.82s-.4-.13-.57.13-.66.82-.81.99-.3.19-.55.06a6.6 6.6 0 0 1-1.94-1.2 7.3 7.3 0 0 1-1.35-1.67c-.14-.25 0-.39.1-.52.12-.12.25-.3.38-.45s.18-.25.27-.42a.48.48 0 0 0 0-.45c-.06-.13-.57-1.37-.78-1.88s-.41-.43-.57-.43h-.49a.94.94 0 0 0-.68.32 2.87 2.87 0 0 0-.9 2.13 5 5 0 0 0 1.05 2.66 11.4 11.4 0 0 0 4.37 3.86 5 5 0 0 0 2.86.93 2.45 2.45 0 0 0 1.6-1.14 2 2 0 0 0 .14-1.14c-.06-.09-.22-.14-.47-.27Z"/>
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M6.94 6.5A2.19 2.19 0 1 1 4.75 4.31 2.19 2.19 0 0 1 6.94 6.5ZM7 8.25H4.5V20H7Zm5.25 0H9.8V20h2.45v-6.17c0-3.44 4.47-3.72 4.47 0V20H19.2v-7c0-5.45-6.2-5.25-6.95-2.57Z"/>
+      </symbol>
+      <symbol id="icon-youtube" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31.2 31.2 0 0 0 2.4 12a31.2 31.2 0 0 0 0 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 21.6 12a31.2 31.2 0 0 0 0-4.8ZM10.5 15.3V8.7L16.2 12Z"/>
+      </symbol>
+      <symbol id="icon-behance" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M8.2 11.1a2.7 2.7 0 0 0 1.2-2.4C9.4 6.9 8.2 6 6 6H2v12h4.4c2.4 0 3.9-1.2 3.9-3.4a2.9 2.9 0 0 0-2.1-3.5ZM4 7.8h2c1 0 1.5.4 1.5 1.3S7 10.5 6 10.5H4Zm2.2 8.4H4v-4h2.2c1.3 0 2 .6 2 1.9S7.5 16.2 6.2 16.2ZM20.8 12.6c0-2.7-1.8-4.7-4.6-4.7s-4.7 2-4.7 5.2 1.9 5.1 4.9 5.1a4.2 4.2 0 0 0 4.2-2.7h-2a2.1 2.1 0 0 1-2.1 1.2 2.3 2.3 0 0 1-2.5-2.3h6.8c0-.3 0-.6 0-.8Zm-6.8-.7a2.2 2.2 0 0 1 2.2-2.3 2.1 2.1 0 0 1 2.2 2.3ZM14.2 6.6h4V8h-4Z"/>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/>
+      </symbol>
+    </svg>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
